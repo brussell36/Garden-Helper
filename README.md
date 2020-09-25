@@ -51,7 +51,7 @@ Additional Information: This is my original team week idea, but now I have so ma
 
 | Behavior | Input | Output |
 | -------- | ----- | ------ |
-| 1. As a user, I want to create a user profile. | Email: benjaminrussell36@gmail.com Password: ********** |  |
+| 1. As a user, I want to create a user profile. | Email: fakeemail@gmail.com Password: ********** | Welcome (New User)! |
 | 2. As a user, I want to have my own profile page where I can save the plants I like. |  | List of saved plants |
 | 3. As a user, I want to be able to query an API with a filtered list of plants based on my type of garden. | Sun: All day, Water: Drought Tolerant, Soil: Well Drained | Succulents and Cacti |
 | 4. As a user, I want to see the details of each plant. | Lavender | All of Lavender's details  |
