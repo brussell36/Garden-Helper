@@ -47,6 +47,10 @@ Additional Technology for Stretch Goals:
 
 Additional Information: This is my original team week idea, but now I have so many more tools to really make this project the way I originally imagined it. I will make sure not to use any of the code that we used for the first team week.
 
+## Research
+
+* Read Firebase documentation on seeding database with information so I can use it in a similar way to the API I was thinking of making.
+
 ## Specifications
 
 | Behavior | Input | Output |
