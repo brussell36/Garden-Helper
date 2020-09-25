@@ -55,6 +55,7 @@ Additional Information: This is my original team week idea, but now I have so ma
 * Read about Material Design, do a few tutorials.
 * Read React Material Design documentation.
 * Look into beautiful templates for my projects material design. 
+* Get a little overwhelmed by everything that a template entails.
 
 ## Specifications
 
