@@ -51,11 +51,11 @@ Additional Information: This is my original team week idea, but now I have so ma
 
 | Behavior | Input | Output |
 | -------- | ----- | ------ |
-| 1. As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent. |  | List of all Beers on Tap List |
-| 2. As a user, I want to submit a form to add a new keg to a list. | Add New Tap button | New Tap appears on list |
-| 3. As a user, I want to be able to click on a keg to see its detail page. |  | Pfriem IPA details |
-| 4. As a user, I want to see how many pints are left in a keg. | Pour button | 123 pints left |
-| 5. As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0. | Pour button | Out of Stock |
+| 1. As a user, I want to create a user profile. | Email: benjaminrussell36@gmail.com Password: ********** |  |
+| 2. As a user, I want to have my own profile page where I can save the plants I like. |  | List of saved plants |
+| 3. As a user, I want to be able to query an API with a filtered list of plants based on my type of garden. | Sun: All day, Water: Drought Tolerant, Soil: Well Drained | Succulents and Cacti |
+| 4. As a user, I want to see the details of each plant. | Lavender | All of Lavender's details  |
+| 5. As a user, I want to be able to click a button to save plants to my profile. | Add Plant | Appear on Profile page |
 
 ## Setup/Installation Instructions
 
