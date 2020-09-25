@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { useHistory } from "react-router-dom";
+import Header from "./Header";
 
 function SignIn() {
   
@@ -27,6 +28,7 @@ function SignIn() {
 
   return(
     <React.Fragment>
+      <Header />
       <Container>
         <h1>Sign In</h1>
         <Form onClick={doSignIn}>

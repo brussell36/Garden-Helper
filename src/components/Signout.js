@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { useHistory } from "react-router-dom";
+import Header from "./Header";
 
 function SignOut() {
 
@@ -24,6 +25,7 @@ function SignOut() {
 
   return(
     <React.Fragment>
+      <Header />
       <Container>
         <h1>Sign Out</h1>
         <h3>If you are sure you want to sign out click here:</h3>
