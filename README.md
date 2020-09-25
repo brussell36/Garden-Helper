@@ -7,7 +7,7 @@
 
 ## Description
 
-This application will allow a user to track the different types of beer on tap at a tap room. The user will be able to see a list of all taps and see the details of a specific tap. The user will also be able to edit a taps details incase something was entered incorrectly. A tap can also be deleted when that keg is empty. Each time a beer is poured the amount of beer in the keg should be decreased and no more beer should be poured after the keg reaches 0 pints left.
+This application will allow a user to filter an API query with information about their type of garden. The user will be then be able to see a list of plants that fit their specifications. The user will be able to choose from the list of plants the ones they want most and save them to their own page. A plant can be deleted if the user decides they do not want it saved to their page any longer. 
 
 ![App Diagram](./Garden-components.png)
 
