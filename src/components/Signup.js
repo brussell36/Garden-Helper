@@ -1,8 +1,8 @@
 import React from "react";
 import firebase from "firebase/app";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
+import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
 import Header from "./Header";
 
 function SignUp() {

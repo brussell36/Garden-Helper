@@ -54,6 +54,7 @@ Additional Information: This is my original team week idea, but now I have so ma
 * Read Firebase documentation on seeding database with information so I can use it in a similar way to the API I was thinking of making.
 * Read about Material Design, do a few tutorials.
 * Read React Material Design documentation.
+* Look into beautiful templates for my projects material design. 
 
 ## Specifications
 
