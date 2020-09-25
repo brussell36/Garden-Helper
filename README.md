@@ -10,6 +10,8 @@
 
 This application will allow a user to filter an API query with information about their type of garden. The user will be then be able to see a list of plants that fit their specifications. The user will be able to choose from the list of plants the ones they want most and save them to their own page. A plant can be deleted if the user decides they do not want it saved to their page any longer. 
 
+## Component Diagram
+
 ![App Diagram](./Garden-components.png)
 
 ## Capstone Proposal
