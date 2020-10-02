@@ -5,7 +5,6 @@ import withAuthorization from './../Session/withAuthorization';
 function Profile() {
   return(
     <React.Fragment>
-      <h4>Change your Password</h4>
       <PasswordChange />
     </React.Fragment>
   )

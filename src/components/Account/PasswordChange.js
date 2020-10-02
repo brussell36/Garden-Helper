@@ -26,7 +26,8 @@ function PasswordChange(props) {
   }
 
   return(
-    <Container>
+    <Container className='login-container'>
+      <h2>Change your Password</h2>
       <Form onSubmit={onSubmit}>
         <Form.Group controlId='password1'>
           <Form.Control
