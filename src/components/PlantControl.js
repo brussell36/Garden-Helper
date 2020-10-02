@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
 import LandingPage from './LandingPage/LandingPage';
 import AccountControl from './Account/AccountControl';
+import PasswordForgot from './Account/PasswordForgot';
 
 function PlantControl() {
   return(<React.Fragment>
@@ -14,6 +15,9 @@ function PlantControl() {
         </Route>
         <Route path='/account' exact>
           <AccountControl />
+        </Route>
+        <Route path='/forgot-password'>
+          <PasswordForgot />
         </Route>
       </Switch>
     </Router>

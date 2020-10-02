@@ -28,8 +28,7 @@ function LogIn(props) {
   const isInvalid = logPassword === '' || logEmail === '';
 
   return (
-    <Container className='login-container'>
-      <h1>Log In</h1>
+    <Container>
       <Form onSubmit={onSubmit}>
         <Form.Group controlId="logEmail">
           <Form.Control
