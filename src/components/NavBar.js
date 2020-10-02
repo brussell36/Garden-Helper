@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import SignOut from './.Account/SignOut';
+import SignOut from './Account/SignOut';
 import { withAuthContext } from './Session/index';
 
 function NavBar(props) {
   const {authUser} = props;
 
-  const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='login' className='mr-auto'>Log In</Nav.Link>;
+  const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='/login' className='mr-auto'>Log In</Nav.Link>;
 
   return (
     <React.Fragment>
@@ -19,7 +19,6 @@ function NavBar(props) {
             <Nav.Link href='/signup'>Sign-up</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/login">Log In</Nav.Link>
             {accountLink}
           </Nav>
         </Navbar.Collapse>

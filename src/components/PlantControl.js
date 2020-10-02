@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
 import LandingPage from './LandingPage/LandingPage';
+import AccountControl from './Account/AccountControl';
 
 function PlantControl() {
   return(<React.Fragment>
