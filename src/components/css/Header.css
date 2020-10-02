@@ -5,18 +5,16 @@
   background-attachment: fixed;
   background-size: cover;
   height: 40rem;
+  color: #f5efef;
+  text-align: center;
 }
 
-h1 {
-  text-align: center;
-  color: white;
+.title {
   font-size: 5rem;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
-h3{
-  color: white;
-  text-align: center;
+.under-title {
   position: relative;
-  padding: 10rem 20rem;
+  padding-top: 5%;
 }
