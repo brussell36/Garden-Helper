@@ -1,38 +1,19 @@
-import React from "react";
-import firebase from "firebase/app";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { withFirebase } from './../Firebase';
+import Button from 'react-bootstrap/Button';
 
-function SignOut() {
+function SignOut(props) {
+  const history = useHistory();
 
-  let history = useHistory();
-
-  function doSignOut() {
-    firebase
-      .auth()
-      .signOut()
-      .then(function () {
-        console.log("Successfully signed out!");
-        history.push("/");
-      })
-      .catch(function (error) {
-        console.log(error.message);
-      });
+  const onClick = () => {
+    props.firebase.doSignOut();
+    history.push('/');
   }
 
-  return(
-    <React.Fragment>
-      <Container>
-        <h1>Sign Out</h1>
-        <h3>If you are sure you want to sign out click here:</h3>
-        <Form onClick={doSignOut}>
-          <Button type='submit' variant='warning'>Sign Out</Button>
-        </Form>
-      </Container>
-    </React.Fragment>
-  );
+  return (
+    <Button type='button' variant='alert' onClick={onClick}>Log Out</Button>
+  )
 }
 
-export default SignOut;
+export default withFirebase(SignOut);

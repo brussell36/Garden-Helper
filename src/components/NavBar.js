@@ -1,8 +1,13 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import SignOut from './.Account/SignOut';
+import { withAuthContext } from './Session/index';
 
 function NavBar(props) {
+  const {authUser} = props;
+
+  const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='login' className='mr-auto'>Log In</Nav.Link>;
 
   return (
     <React.Fragment>
@@ -12,10 +17,10 @@ function NavBar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href='/signup'>Sign-up</Nav.Link>
-            <Nav.Link href="/login">Log In</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href='/signout'>Sign-out</Nav.Link>
+            <Nav.Link href="/login">Log In</Nav.Link>
+            {accountLink}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -23,4 +28,4 @@ function NavBar(props) {
   );
 }
 
-export default NavBar;
+export default withAuthContext(NavBar);
