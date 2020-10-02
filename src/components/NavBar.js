@@ -8,7 +8,7 @@ function NavBar(props) {
 
   return (
     <React.Fragment>
-      <Navbar style={{ backgroundColor: "rgba(255, 255, 255, .5)", boxShadow: "0 5px 15px rgba(0, 0, 0, .5)",}} sticky="top" expand="lg">
+      <Navbar style={{ backgroundColor: "#7ea04d", boxShadow: "0 5px 15px rgba(0, 0, 0, .5)",}} sticky="top" expand="lg">
         <Navbar.Brand as={Link} to="/">Garden Helper</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -1,0 +1,23 @@
+.features-section {
+  background-color: #f5efef;
+}
+
+.container {
+  text-align: center;
+  padding-top: 8%;
+
+}
+
+.features-icon {
+  color: #335d2d;
+}
+
+.features-icon:hover {
+  color: #7ea04d;
+}
+
+h4 {
+  margin: 8% 0 5% 0;
+  position: relative;
+  align-items: center;
+}
