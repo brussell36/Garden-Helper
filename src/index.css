@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.title-section {
+  background-image: url(https://www.thespruce.com/thmb/bIfxEOwj9-DdLCpmWYtSKY4jIKI=/3620x2715/smart/filters:no_upscale/garden-at-high-summer-containing-a-variety-colourful-flowers-including-phloxes-138707849-5786be9e5f9b5831b541eeab.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
