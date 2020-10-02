@@ -1,0 +1,22 @@
+.title-section {
+  background-image: url(./../img/SecretGarden.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 40rem;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  padding-top: 5%;
+}
+
+h3{
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 10rem 20rem;
+}
