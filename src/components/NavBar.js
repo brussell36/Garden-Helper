@@ -7,7 +7,7 @@ import { withAuthContext } from './Session/index';
 function NavBar(props) {
   const {authUser} = props;
 
-  const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='/login' className='mr-auto'>Log In</Nav.Link>;
+  const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='/account' className='mr-auto'>Log In</Nav.Link>;
 
   return (
     <React.Fragment>
@@ -16,7 +16,7 @@ function NavBar(props) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href='/signup'>Sign-up</Nav.Link>
+            <Nav.Link href='/account'>Sign-up</Nav.Link>
           </Nav>
           <Nav>
             {accountLink}
