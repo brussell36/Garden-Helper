@@ -5,16 +5,24 @@
   background-attachment: fixed;
   background-size: cover;
   height: 40rem;
-  color: #f5efef;
   text-align: center;
 }
 
 .title {
   font-size: 5rem;
-  padding-top: 10%;
+  padding-top: 2%;
 }
 
 .under-title {
   position: relative;
   padding-top: 5%;
+}
+
+.title-container {
+  background-color: rgba(255, 255, 255, .5);
+  padding-bottom: 5%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  position: relative;
+  top: 100px;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { compose } from 'react-compose';
+import { compose } from 'recompose';
 import { withFirebase } from '../Firebase';
 
 const withAuthorization = condition => Component => {
