@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import { useHistory } from "react-router-dom";
-import NavBar from "./NavBar";
 
 function SignOut() {
 
@@ -25,7 +24,6 @@ function SignOut() {
 
   return(
     <React.Fragment>
-      <NavBar />
       <Container>
         <h1>Sign Out</h1>
         <h3>If you are sure you want to sign out click here:</h3>

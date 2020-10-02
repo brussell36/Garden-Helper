@@ -1,9 +1,8 @@
 import React from "react";
 import firebase from "firebase/app";
 import Form from "react-bootstrap/Form";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import NavBar from "./NavBar";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 
 function SignUp() {
   function doSignUp(event) {
@@ -22,7 +21,6 @@ function SignUp() {
   }
   return (
     <React.Fragment>
-      <NavBar />
       <Container className="container">
         <h1>Sign Up</h1>
         <Form onSubmit={doSignUp}>

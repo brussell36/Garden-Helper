@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 
@@ -29,14 +27,6 @@ function NavBar(props) {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form>
-            <Form.Control
-              type="text"
-              name="title"
-              placeholder="title"
-              className="mr-sm-2" />
-            <Button variant="success" type='submit'>Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Navbar>
     </React.Fragment>
