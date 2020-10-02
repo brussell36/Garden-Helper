@@ -12,7 +12,7 @@ function NavBar(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href='/signup'>Sign-up</Nav.Link>
-            <Nav.Link href="/signin">Sign-in</Nav.Link>
+            <Nav.Link href="/login">Log In</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href='/signout'>Sign-out</Nav.Link>
