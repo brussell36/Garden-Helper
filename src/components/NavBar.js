@@ -7,7 +7,9 @@ import { withAuthContext } from './Session/index';
 function NavBar(props) {
   const {authUser} = props;
 
+  const userName = authUser ? <Nav.Link className='mr-auto'>{authUser.displayName}</Nav.Link> : null;
   const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='/account' className='mr-auto'>Log In</Nav.Link>;
+  const profilePage = authUser ? <Nav.Link className='mr-auto' href='/profile'>Your Profile</Nav.Link> : null;
 
   return (
     <React.Fragment>
@@ -19,6 +21,8 @@ function NavBar(props) {
             <Nav.Link href='/account'>Sign-up</Nav.Link>
           </Nav>
           <Nav>
+            {userName}
+            {profilePage}
             {accountLink}
           </Nav>
         </Navbar.Collapse>
