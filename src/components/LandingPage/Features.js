@@ -6,7 +6,7 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import './css/Features.css';
+import './../css/Features.css';
 
 function Features() {
   return(
