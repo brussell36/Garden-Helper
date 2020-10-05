@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import CardColumns from 'react-bootstrap/CardColumns';
 import { firestore } from 'firebase';
+import { withFirebase } from './Firebase'
+import Plant from './Plant';
 
 function NewPlantForm() {
   const onSubmitForm = async (event) => {
@@ -20,6 +23,28 @@ function NewPlantForm() {
       snapshot = await firestore.collection('plants').where('soil', '===', soilValue).get();
     }
   }
+
+  const plant = snapshot.docs.map(doc => {
+    const documentId = doc.id;
+    const plantObj = {documentId, ...doc.data()};
+    return plantObj;
+  })
+
+  let display = <>
+    <CardColumns>
+      {onSubmitForm.map((plant) => {
+        return(
+          <Plant
+            commonName={plant.commonName}
+            latinName={plant.latinName}
+            imgUrl={plant.imgUrl}
+            sun={plant.sun}
+            water={plant.water}
+            soil={plant.soil}
+            description={plant.description} />
+        )
+      })}
+    </CardColumns></>
 
   return(
     <>
@@ -55,9 +80,10 @@ function NewPlantForm() {
           </Form.Group>
           <Button type='submit' variant='success'>Get Plants!</Button>
         </Form>
+        {display}
       </Container>
     </>
   )
 }
 
-export default NewPlantForm;
+export default withFirebase(NewPlantForm);
