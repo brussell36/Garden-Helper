@@ -5,6 +5,7 @@ import LandingPage from './LandingPage/LandingPage';
 import AccountControl from './Account/AccountControl';
 import PasswordForgot from './Account/PasswordForgot';
 import Profile from './Account/Profile';
+import NewPlantForm from './NewPlantForm';
 
 function PlantControl() {
   return(<React.Fragment>
@@ -22,6 +23,9 @@ function PlantControl() {
         </Route>
         <Route path='/profile' exact>
           <Profile />
+        </Route>
+        <Route path='/search-plants' exact>
+          <NewPlantForm />
         </Route>
       </Switch>
     </Router>

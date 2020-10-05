@@ -12,21 +12,20 @@ function NavBar(props) {
   const profilePage = authUser ? <Nav.Link className='mr-auto' href='/profile'>Your Profile</Nav.Link> : null;
 
   return (
-    <React.Fragment>
-      <Navbar style={{ backgroundColor: "#7ea04d", boxShadow: "0 5px 15px rgba(0, 0, 0, .5)",}} sticky="top" expand="lg">
-        <Navbar.Brand href="/">Garden Helper</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-          </Nav>
-          <Nav>
-            {userName}
-            {profilePage}
-            {accountLink}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </React.Fragment>
+    <Navbar style={{ backgroundColor: "#7ea04d", boxShadow: "0 5px 15px rgba(0, 0, 0, .5)",}} sticky="top" expand="lg">
+      <Navbar.Brand href="/">Garden Helper</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href='/search-plants'>Search Plants</Nav.Link>
+        </Nav>
+        <Nav>
+          {userName}
+          {profilePage}
+          {accountLink}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
 

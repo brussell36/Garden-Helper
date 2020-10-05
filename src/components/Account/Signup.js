@@ -31,7 +31,6 @@ function SignUp(props) {
   }
 
   return (
-    <React.Fragment>
       <Form onSubmit={onSubmit}>
         <Form.Group controlid='signupUsername'>
           <Form.Control 
@@ -65,7 +64,6 @@ function SignUp(props) {
 
         {error && <p>{error.message}</p>}
       </Form>
-    </React.Fragment>
   );
 }
 

@@ -4,9 +4,7 @@ import withAuthorization from './../Session/withAuthorization';
 
 function Profile() {
   return(
-    <React.Fragment>
-      <PasswordChange />
-    </React.Fragment>
+    <PasswordChange />
   )
 }
 
