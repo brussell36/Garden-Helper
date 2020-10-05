@@ -56,6 +56,7 @@ Additional Information: This is my original team week idea, but now I have so ma
 * Read React Material Design documentation.
 * Look into beautiful templates for my projects material design. 
 * Get a little overwhelmed by everything that a template entails.
+* Spend time seeding my Cloud Firestore database so the user can query it.
 
 ## Specifications
 
@@ -84,6 +85,7 @@ Please feel free to contact me through GitHub (username: brussell36) with any qu
 ## Technologies Used
 
 * React.js
+* Firebase
 * Webpack
 * Visual Studio Code 
 * Git and Git BASH 
