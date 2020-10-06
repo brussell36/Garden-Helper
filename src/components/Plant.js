@@ -10,12 +10,10 @@ function Plant(props) {
         <Card.Body>
           <Card.Title>{props.commonName}</Card.Title>
           <Card.Subtitle>{props.latinName}</Card.Subtitle>
-          <Card.Text>
-            Sun: {props.sun}
-            Water: {props.water}
-            Soil: {props.soil}
-            Description: {props.description}
-          </Card.Text>
+          <Card.Text>Sun: {props.sun}</Card.Text>
+          <Card.Text>Water: {props.water}</Card.Text>
+          <Card.Text>Soil: {props.soil}</Card.Text> 
+          <Card.Text>Description: {props.description}</Card.Text>
         </Card.Body>
       </Card>
     </>
