@@ -57,8 +57,7 @@ function NewPlantForm(props) {
           })}
       </CardColumns>
       return display;
-    } 
-    if(sunValue !== '' && waterValue !== '') {
+    } else if(sunValue !== '' && waterValue !== '') {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue);
       console.log(sunResult);
       display = <CardColumns>
@@ -77,8 +76,7 @@ function NewPlantForm(props) {
           })}
       </CardColumns>
       return display;
-    } 
-    if(waterValue !== '' && soilValue !== '') {
+    } else if(waterValue !== '' && soilValue !== '') {
       const waterResult = state.plants.filter(plant => plant.water === waterValue && plant.soil === soilValue);
       console.log(waterResult);
       display = <CardColumns>
@@ -97,8 +95,7 @@ function NewPlantForm(props) {
           })}
       </CardColumns>
       return display;
-    }
-    if (sunValue !== '') {
+    } else if (sunValue !== '') {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue);
       console.log(sunResult);
       display = <CardColumns>
@@ -117,8 +114,7 @@ function NewPlantForm(props) {
           })}
       </CardColumns>
       return display;
-    }
-    if (waterValue !== '') {
+    } else if (waterValue !== '') {
       const waterResult = state.plants.filter(plant => plant.water === waterValue);
       console.log(waterResult);
       display = <CardColumns>
@@ -137,8 +133,7 @@ function NewPlantForm(props) {
           })}
       </CardColumns>
       return display;
-    }
-    if (soilValue !== '') {
+    } else if (soilValue !== '') {
       const soilResult = state.plants.filter(plant => plant.soil === soilValue);
       console.log(soilResult);
       display = <CardColumns>

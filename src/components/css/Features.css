@@ -17,3 +17,29 @@ h4 {
   position: relative;
   align-items: center;
 }
+
+.about-img {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 8%;
+}
+
+.about-h1 {
+  text-align: center;
+  margin-bottom: 8%;
+}
+
+.about-col {
+  text-align: center;
+}
+
+.about-section {
+  background-color: #7ea04d;
+  height: 40rem;
+}
+
+.about-container {
+  position: relative;
+  top: 100px;
+  bottom: 100px;
+}
