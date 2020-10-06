@@ -3,6 +3,7 @@ import Header from './Header';
 import Features from './Features';
 import About from './About';
 import Footer from './Footer';
+import ImageCarousel from './ImageCarousel';
 
 function LandingPage() {
   return(
@@ -10,6 +11,7 @@ function LandingPage() {
       <Header />
       <Features />
       <About />
+      <ImageCarousel />
       <Footer />
     </>
   );

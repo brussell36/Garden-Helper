@@ -43,3 +43,18 @@ h4 {
   top: 100px;
   bottom: 100px;
 }
+
+.carousel-section {
+  text-align: center;
+  background-color: #f5efef;
+  height: 45rem;
+}
+
+.carousel-img {
+  height: 500px;
+}
+
+.carousel-title {
+  position: relative;
+  padding-top: 5%;
+}
