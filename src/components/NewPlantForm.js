@@ -17,7 +17,6 @@ const reducer = (state, action) => {
 }
 
 function NewPlantForm(props) {
-  // const [plant, setPlant] = useState(null);
   const [state, dispatch] = useReducer(reducer, {plants: []});
   let display = null;
 
@@ -35,24 +34,79 @@ function NewPlantForm(props) {
     const sunValue = event.target.sun.value;
     const waterValue = event.target.water.value;
     const soilValue = event.target.soil.value;
-    
+    console.log(sunValue);
+    console.log(waterValue);
+    console.log(soilValue);
+    if(sunValue !== null) {
+      const result = state.plants.filter(plant => plant.sun === sunValue);
+      console.log(result);
+      display = <CardColumns>
+        {result.map((plant) => {
+          return(
+            <Plant
+              commonName={plant.commonName}
+              latinName={plant.latinName}
+              imgUrl={plant.imgUrl}
+              sun={plant.sun}
+              water={plant.water}
+              soil={plant.soil}
+              description={plant.description} />
+          )
+          })}
+      </CardColumns>
+      return display;
+    } else if(waterValue !== null) {
+      const result = state.plants.filter(plant => plant.water === waterValue);
+      console.log(result);
+      display = <CardColumns>
+        {result.map((plant) => {
+          return(
+            <Plant
+              commonName={plant.commonName}
+              latinName={plant.latinName}
+              imgUrl={plant.imgUrl}
+              sun={plant.sun}
+              water={plant.water}
+              soil={plant.soil}
+              description={plant.description} />
+          )
+          })}
+      </CardColumns>
+      return display;
+    } else if (soilValue !== null) {
+      const result = state.plants.filter(plant => plant.soil === soilValue);
+      console.log(result);
+      display = <CardColumns>
+        {result.map((plant) => {
+          return(
+            <Plant
+              commonName={plant.commonName}
+              latinName={plant.latinName}
+              imgUrl={plant.imgUrl}
+              sun={plant.sun}
+              water={plant.water}
+              soil={plant.soil}
+              description={plant.description} />
+          )
+          })}
+      </CardColumns>
+      return display;
+    }
   }
-  
-  display = <CardColumns>
-      {state.plants.map((plant) => {
-        return(
-          <Plant
-            commonName={plant.commonName}
-            latinName={plant.latinName}
-            imgUrl={plant.imgUrl}
-            sun={plant.sun}
-            water={plant.water}
-            soil={plant.soil}
-            description={plant.description} />
-        )
-        })}
-    </CardColumns>
-
+    // display = <CardColumns>
+    //     {state.plants.map((plant) => {
+    //       return(
+    //         <Plant
+    //           commonName={plant.commonName}
+    //           latinName={plant.latinName}
+    //           imgUrl={plant.imgUrl}
+    //           sun={plant.sun}
+    //           water={plant.water}
+    //           soil={plant.soil}
+    //           description={plant.description} />
+    //       )
+    //       })}
+    //   </CardColumns>
 
   return(
     <Container className='login-container'>
