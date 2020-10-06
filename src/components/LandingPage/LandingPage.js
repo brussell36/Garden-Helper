@@ -5,11 +5,11 @@ import Footer from './Footer';
 
 function LandingPage() {
   return(
-    <React.Fragment>
+    <>
       <Header />
       <Features />
       <Footer />
-    </React.Fragment>
+    </>
   );
 }
 
