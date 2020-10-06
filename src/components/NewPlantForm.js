@@ -58,7 +58,67 @@ function NewPlantForm(props) {
       </CardColumns>
       return display;
     } 
-    if(waterValue !== '') {
+    if(sunValue !== '' && waterValue !== '') {
+      const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue);
+      console.log(sunResult);
+      display = <CardColumns>
+        {sunResult.map((plant) => {
+          return(
+            <Plant
+              commonName={plant.commonName}
+              latinName={plant.latinName}
+              imgUrl={plant.imgUrl}
+              sun={plant.sun}
+              water={plant.water}
+              soil={plant.soil}
+              description={plant.description}
+              key={plant.id} />
+          )
+          })}
+      </CardColumns>
+      return display;
+    } 
+    if(waterValue !== '' && soilValue !== '') {
+      const waterResult = state.plants.filter(plant => plant.water === waterValue && plant.soil === soilValue);
+      console.log(waterResult);
+      display = <CardColumns>
+        {waterResult.map((plant) => {
+          return(
+            <Plant
+              commonName={plant.commonName}
+              latinName={plant.latinName}
+              imgUrl={plant.imgUrl}
+              sun={plant.sun}
+              water={plant.water}
+              soil={plant.soil}
+              description={plant.description}
+              key={plant.id} />
+          )
+          })}
+      </CardColumns>
+      return display;
+    }
+    if (sunValue !== '') {
+      const sunResult = state.plants.filter(plant => plant.sun === sunValue);
+      console.log(sunResult);
+      display = <CardColumns>
+        {sunResult.map((plant) => {
+          return(
+            <Plant
+              commonName={plant.commonName}
+              latinName={plant.latinName}
+              imgUrl={plant.imgUrl}
+              sun={plant.sun}
+              water={plant.water}
+              soil={plant.soil}
+              description={plant.description}
+              key={plant.id} />
+          )
+          })}
+      </CardColumns>
+      return display;
+    }
+    if (waterValue !== '') {
       const waterResult = state.plants.filter(plant => plant.water === waterValue);
       console.log(waterResult);
       display = <CardColumns>
