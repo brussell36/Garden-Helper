@@ -8,7 +8,7 @@
 
 ## Description
 
-This application will allow a user to filter an API query with information about their type of garden. The user will be then be able to see a list of plants that fit their specifications. The user will be able to choose from the list of plants the ones they want most and save them to their own page. A plant can be deleted if the user decides they do not want it saved to their page any longer. 
+This application will allow a user to filter a database with information about their type of garden. The user will be then be able to see a list of plants that fit their specifications. The user will be able to choose from the list of plants the ones they want most and save them to their own page. A plant can be deleted if the user decides they do not want it saved to their page any longer. 
 
 ## Component Diagram
 
@@ -74,13 +74,15 @@ Additional Information: This is my original team week idea, but now I have so ma
 * Go to [Firebase](https://firebase.google.com/) and create a new project.
 * You will need to create a .env file at the top level of the project.
 * When you create your project in Firebase you will get a script tag that holds a firebaseConfig variable.
-* In the .env file paste ```REACT_APP_FIREBASE_API_KEY = "YOUR-UNIQUE-CREDENTIALS"
+* In the .env file paste 
+`REACT_APP_FIREBASE_API_KEY = "YOUR-UNIQUE-CREDENTIALS"
 REACT_APP_FIREBASE_AUTH_DOMAIN = "YOUR-PROJECT-NAME.firebaseapp.com"
 REACT_APP_FIREBASE_DATABASE_URL = "https://YOUR-PROJECT-NAME.firebaseio.com"
 REACT_APP_FIREBASE_PROJECT_ID = "YOUR-PROJECT-FIREBASE-PROJECT-ID"
 REACT_APP_FIREBASE_STORAGE_BUCKET = "YOUR-PROJECT-NAME.appspot.com"
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID = "YOUR-PROJECT-SENDER-ID"
-REACT_APP_FIREBASE_APP_ID = "YOUR-PROJECT-APP-ID"``` with all the strings changed to reflect what is in your firebaseConfig variable.
+REACT_APP_FIREBASE_APP_ID = "YOUR-PROJECT-APP-ID"`
+with all the strings changed to reflect what is in your firebaseConfig variable.
 * Run `npm install`
 * Run `npm start` to start a development server to view the project.
 
