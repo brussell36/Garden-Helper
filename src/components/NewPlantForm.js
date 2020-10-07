@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer, useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 
 function NewPlantForm(props) {
   const [state, dispatch] = useReducer(reducer, {plants: []});
-  let display = null;
+  const [display, setDisplay] = useState(null);
 
   useEffect(() => {
     props.firebase.db.collection('plants').get()
@@ -41,7 +41,7 @@ function NewPlantForm(props) {
     if(sunValue !== '' && waterValue !== '' && soilValue !== '') {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue && plant.soil === soilValue);
       console.log(sunResult);
-      display = <CardColumns>
+      setDisplay(<CardColumns>
         {sunResult.map((plant) => {
           return(
             <Plant
@@ -55,12 +55,11 @@ function NewPlantForm(props) {
               key={plant.id} />
           )
           })}
-      </CardColumns>
-      return display;
+      </CardColumns>)
     } else if(sunValue !== '' && waterValue !== '') {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue);
       console.log(sunResult);
-      display = <CardColumns>
+      setDisplay(<CardColumns>
         {sunResult.map((plant) => {
           return(
             <Plant
@@ -74,12 +73,11 @@ function NewPlantForm(props) {
               key={plant.id} />
           )
           })}
-      </CardColumns>
-      return display;
+      </CardColumns>)
     } else if(waterValue !== '' && soilValue !== '') {
       const waterResult = state.plants.filter(plant => plant.water === waterValue && plant.soil === soilValue);
       console.log(waterResult);
-      display = <CardColumns>
+      setDisplay(<CardColumns>
         {waterResult.map((plant) => {
           return(
             <Plant
@@ -93,12 +91,11 @@ function NewPlantForm(props) {
               key={plant.id} />
           )
           })}
-      </CardColumns>
-      return display;
+      </CardColumns>)
     } else if (sunValue !== '') {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue);
       console.log(sunResult);
-      display = <CardColumns>
+      setDisplay(<CardColumns>
         {sunResult.map((plant) => {
           return(
             <Plant
@@ -112,12 +109,11 @@ function NewPlantForm(props) {
               key={plant.id} />
           )
           })}
-      </CardColumns>
-      return display;
+      </CardColumns>)
     } else if (waterValue !== '') {
       const waterResult = state.plants.filter(plant => plant.water === waterValue);
       console.log(waterResult);
-      display = <CardColumns>
+      setDisplay(<CardColumns>
         {waterResult.map((plant) => {
           return(
             <Plant
@@ -131,12 +127,11 @@ function NewPlantForm(props) {
               key={plant.id} />
           )
           })}
-      </CardColumns>
-      return display;
+      </CardColumns>)
     } else if (soilValue !== '') {
       const soilResult = state.plants.filter(plant => plant.soil === soilValue);
       console.log(soilResult);
-      display = <CardColumns>
+      setDisplay(<CardColumns>
         {soilResult.map((plant) => {
           return(
             <Plant
@@ -150,26 +145,9 @@ function NewPlantForm(props) {
               key={plant.id} />
           )
           })}
-      </CardColumns>
-      return display;
+      </CardColumns>)
     }
   }
-  
-  display = <CardColumns>
-      {state.plants.map((plant) => {
-        return(
-          <Plant
-            commonName={plant.commonName}
-            latinName={plant.latinName}
-            imgUrl={plant.imgUrl}
-            sun={plant.sun}
-            water={plant.water}
-            soil={plant.soil}
-            description={plant.description}
-            key={plant.id} />
-        )
-        })}
-    </CardColumns>
 
   return(
     <Container className='login-container'>
