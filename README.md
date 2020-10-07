@@ -70,7 +70,17 @@ Additional Information: This is my original team week idea, but now I have so ma
 
 ## Setup/Installation Instructions
 
-* Clone this repository to your project directory https://github.com/brussell36/TapRoom.git
+* Clone this repository to your project directory https://github.com/brussell36/Garden-Helper.git
+* Go to [Firebase](https://firebase.google.com/) and create a new project.
+* You will need to create a .env file at the top level of the project.
+* When you create your project in Firebase you will get a script tag that holds a firebaseConfig variable.
+* In the .env file paste ```REACT_APP_FIREBASE_API_KEY = "YOUR-UNIQUE-CREDENTIALS"
+REACT_APP_FIREBASE_AUTH_DOMAIN = "YOUR-PROJECT-NAME.firebaseapp.com"
+REACT_APP_FIREBASE_DATABASE_URL = "https://YOUR-PROJECT-NAME.firebaseio.com"
+REACT_APP_FIREBASE_PROJECT_ID = "YOUR-PROJECT-FIREBASE-PROJECT-ID"
+REACT_APP_FIREBASE_STORAGE_BUCKET = "YOUR-PROJECT-NAME.appspot.com"
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = "YOUR-PROJECT-SENDER-ID"
+REACT_APP_FIREBASE_APP_ID = "YOUR-PROJECT-APP-ID"``` with all the strings changed to reflect what is in your firebaseConfig variable.
 * Run `npm install`
 * Run `npm start` to start a development server to view the project.
 
