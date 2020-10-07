@@ -57,6 +57,8 @@ Additional Information: This is my original team week idea, but now I have so ma
 * Look into beautiful templates for my projects material design. 
 * Get a little overwhelmed by everything that a template entails.
 * Spend time seeding my Cloud Firestore database so the user can query it.
+* Research issues realted to Firebase hosting.
+* Plan my presentation for Thursday 8/08/2020.
 
 ## Specifications
 
