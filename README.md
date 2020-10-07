@@ -59,6 +59,7 @@ Additional Information: This is my original team week idea, but now I have so ma
 * Spend time seeding my Cloud Firestore database so the user can query it.
 * Research issues realted to Firebase hosting.
 * Plan my presentation for Thursday 8/08/2020.
+* Add several more data points to database.
 
 ## Specifications
 
