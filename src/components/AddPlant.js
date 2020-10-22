@@ -20,7 +20,7 @@ function AddPlant(props) {
 
   const addPlant = () => {
     db.collection(user.email).doc(plant.idPlant).set({
-      idPlant: plant.idPlant,
+      key: plant.idPlant,
       commonName: plant.commonName,
       latinName: plant.latinName,
       imgUrl: plant.imgUrl,

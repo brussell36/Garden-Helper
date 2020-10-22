@@ -48,7 +48,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
           })}
       </CardColumns>)
@@ -65,7 +65,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
           })}
       </CardColumns>)
@@ -82,7 +82,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
           })}
       </CardColumns>)
@@ -99,7 +99,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
           })}
       </CardColumns>)
@@ -116,7 +116,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
           })}
       </CardColumns>)
@@ -133,7 +133,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
           })}
       </CardColumns>)
@@ -149,7 +149,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
-              key={plant.id} />
+              key={plant.idPlant} />
           )
         })}
       </CardColumns>)

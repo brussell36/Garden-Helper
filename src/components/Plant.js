@@ -5,7 +5,7 @@ import AddPlant from './AddPlant';
 
 function Plant(props) {
 
-  const favoriteButton = <AddPlant plant={props.plant} />
+  const favoriteButton = <AddPlant plant={props.plant} />;
 
   return(
     <>
@@ -18,8 +18,8 @@ function Plant(props) {
           <Card.Text>Water: {props.water}</Card.Text>
           <Card.Text>Soil: {props.soil}</Card.Text> 
           <Card.Text>Description: {props.description}</Card.Text>
-        </Card.Body>
         {favoriteButton}
+        </Card.Body>
       </Card>
     </>
   );
