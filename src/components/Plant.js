@@ -1,8 +1,12 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
+import AddPlant from './AddPlant';
 
 function Plant(props) {
+
+  const favoriteButton = <AddPlant plant={props.plant} />
+
   return(
     <>
       <Card>
@@ -15,6 +19,7 @@ function Plant(props) {
           <Card.Text>Soil: {props.soil}</Card.Text> 
           <Card.Text>Description: {props.description}</Card.Text>
         </Card.Body>
+        {favoriteButton}
       </Card>
     </>
   );
@@ -27,7 +32,8 @@ Plant.propTypes = {
   sun: PropTypes.string,
   water: PropTypes.string,
   soil: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
+  plant: PropTypes.object
 }
 
 export default Plant;
