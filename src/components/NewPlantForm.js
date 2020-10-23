@@ -41,6 +41,7 @@ function NewPlantForm(props) {
         {sunResult.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
@@ -58,6 +59,7 @@ function NewPlantForm(props) {
         {sunResult.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
@@ -75,6 +77,7 @@ function NewPlantForm(props) {
         {waterResult.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
@@ -92,6 +95,7 @@ function NewPlantForm(props) {
         {sunResult.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
@@ -109,6 +113,7 @@ function NewPlantForm(props) {
         {waterResult.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
@@ -126,6 +131,7 @@ function NewPlantForm(props) {
         {soilResult.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
@@ -142,6 +148,7 @@ function NewPlantForm(props) {
         {state.plants.map((plant) => {
           return(
             <Plant
+              plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
