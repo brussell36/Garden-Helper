@@ -34,6 +34,16 @@ function NewPlantForm(props) {
     const waterValue = event.target.water.value;
     const soilValue = event.target.soil.value;
 
+    const filteredResult = state.plants.filter(
+      plant => {
+        console.log(plant.sun);
+        console.log("Sun filter value: ", sunValue);
+        return plant.sun === sunValue || plant.water === waterValue || plant.soil === soilValue;
+      }
+    );
+
+    console.log("Filtered result: ", filteredResult);
+
     if(sunValue && waterValue && soilValue) {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue && plant.soil === soilValue);
       console.log(sunResult);
@@ -42,7 +52,7 @@ function NewPlantForm(props) {
           return(
             <Plant
               plant={plant}
-              commonName={plant.commonName}
+              comonName={plant.commonName}
               latinName={plant.latinName}
               imgUrl={plant.imgUrl}
               sun={plant.sun}
