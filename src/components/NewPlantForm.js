@@ -34,15 +34,15 @@ function NewPlantForm(props) {
     const waterValue = event.target.water.value;
     const soilValue = event.target.soil.value;
 
-    const filteredResult = state.plants.filter(
-      plant => {
-        console.log(plant.sun);
-        console.log("Sun filter value: ", sunValue);
-        return plant.sun === sunValue || plant.water === waterValue || plant.soil === soilValue;
-      }
-    );
+    // const filteredResult = state.plants.filter(
+    //   plant => {
+    //     console.log(plant.sun);
+    //     console.log("Sun filter value: ", sunValue);
+    //     return plant.sun === sunValue || plant.water === waterValue || plant.soil === soilValue;
+    //   }
+    // );
 
-    console.log("Filtered result: ", filteredResult);
+    // console.log("Filtered result: ", filteredResult);
 
     if(sunValue && waterValue && soilValue) {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue && plant.soil === soilValue);

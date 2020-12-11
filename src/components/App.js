@@ -10,6 +10,7 @@ import PasswordForgot from './Account/PasswordForgot';
 import Profile from './Account/Profile';
 import NewPlantForm from './NewPlantForm';
 import AuthUserContext from './Session';
+import UserPlantList from './UserPlantList';
 
 function App(props) {
   const [authUser, setAuthUser] = useState(null);
@@ -25,25 +26,28 @@ function App(props) {
   return (
     <AuthUserContext.Provider value={authUser}>
       <Router>
-      <NavBar />
-      <Switch>
-        <Route path='/' exact>
-          <LandingPage />
-        </Route>
-        <Route path='/account' exact>
-          <AccountControl />
-        </Route>
-        <Route path='/forgot-password' exact>
-          <PasswordForgot />
-        </Route>
-        <Route path='/profile' exact>
-          <Profile />
-        </Route>
-        <Route path='/search-plants' exact>
-          <NewPlantForm />
-        </Route>
-      </Switch>
-    </Router>
+        <NavBar />
+        <Switch>
+          <Route path='/' exact>
+            <LandingPage />
+          </Route>
+          <Route path='/account'>
+            <AccountControl />
+          </Route>
+          <Route path='/forgot-password'>
+            <PasswordForgot />
+          </Route>
+          <Route path='/profile'>
+            <Profile />
+          </Route>
+          <Route path='/search-plants'>
+            <NewPlantForm />
+          </Route>
+          <Route path='/saved'>
+            <UserPlantList />
+          </Route>
+        </Switch>
+      </Router>
     </AuthUserContext.Provider>
   );
 }

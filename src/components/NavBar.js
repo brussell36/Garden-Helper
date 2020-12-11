@@ -9,7 +9,6 @@ function NavBar(props) {
 
   const userName = authUser ? <Nav.Link className='mr-auto' href='/profile'>{authUser.displayName}</Nav.Link> : null;
   const accountLink = authUser ? <Nav className='mr-auto'><SignOut /></Nav> : <Nav.Link href='/account' className='mr-auto'>Log In</Nav.Link>;
-  // const profilePage = authUser ? <Nav.Link className='mr-auto' href='/profile'>Your Profile</Nav.Link> : null;
 
   return (
     <Navbar style={{ backgroundColor: "#7ea04d", boxShadow: "0 5px 15px rgba(0, 0, 0, .5)",}} sticky="top" expand="lg">
@@ -18,6 +17,7 @@ function NavBar(props) {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href='/search-plants'>Search Plants</Nav.Link>
+          <Nav.Link href='/saved'>Saved Plants</Nav.Link>
         </Nav>
         <Nav>
           {userName}
