@@ -6,7 +6,7 @@ function ImageCarousel() {
   return(
     <div className='carousel-section'>
       <h1 className='carousel-title'>So Many Plants!</h1>
-      <Carousel className='carousel-container' controls={false}>
+      <Carousel className='carousel-container' fade={true}>
         <Carousel.Item>
           <Image className='carousel-img' src='https://www.gardeningknowhow.com/wp-content/uploads/2009/08/fuchsia-1.jpg' />
         </Carousel.Item>

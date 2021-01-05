@@ -19,7 +19,6 @@ const reducer = (state, action) => {
 function UserPlantList(props) {
 
   const [state, dispatch] = useReducer(reducer, {plants: []});
-  const [display, setDisplay] = useState(null);
   const [user, setUser] = useState(null);
 
   useEffect(() => props.firebase.auth.onAuthStateChanged(function(user){
@@ -28,9 +27,7 @@ function UserPlantList(props) {
     } else {
       setUser(null);
     }
-  }), [props.firebase.auth]);
-
-  console.log(user);
+  }), []);
   
   useEffect(() => {
     if (user) {
@@ -40,26 +37,31 @@ function UserPlantList(props) {
           plants.map(plant => dispatch({type: 'add_plant', plant}));
         })
     }
-  }, [user, props.firebase.db])
+  }, [user]);
   
-  setDisplay(<CardColumns>
-    {state.plants.map((plant) => {
-      return(
-        <Plant
-          plant={plant}
-          comonName={plant.commonName}
-          latinName={plant.latinName}
-          imgUrl={plant.imgUrl}
-          sun={plant.sun}
-          water={plant.water}
-          soil={plant.soil}
-          description={plant.description}
-          key={plant.idPlant} />
-      )
+  const display = (
+    <CardColumns>
+      {state.plants.map((plant) => {
+        return (
+          <Plant
+            plant={plant}
+            comonName={plant.commonName}
+            latinName={plant.latinName}
+            imgUrl={plant.imgUrl}
+            sun={plant.sun}
+            water={plant.water}
+            soil={plant.soil}
+            description={plant.description}
+            key={plant.idPlant}
+          />
+        );
       })}
-  </CardColumns>)
+    </CardColumns>
+  );
+
+
   return (
-    <Container>
+    <Container className='login-container'>
       {display}
     </Container>
   )

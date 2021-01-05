@@ -16,6 +16,8 @@ const reducer = (state, action) => {
   }
 }
 
+
+
 function NewPlantForm(props) {
   const [state, dispatch] = useReducer(reducer, {plants: []});
   const [display, setDisplay] = useState(null);

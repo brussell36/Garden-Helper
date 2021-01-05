@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withFirebase } from './Firebase';
 import withAuthorization from './Session/withAuthorization';
 import { compose } from 'recompose';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from 'react-bootstrap/Button';
 
 function AddPlant(props) {
@@ -28,12 +30,14 @@ function AddPlant(props) {
       water: plant.water,
       soil: plant.soil,
       description: plant.description
-    })
+    });
   }
 
   return(
-    <Button variant='primary' type='button' onClick={addPlant}>Favorite</Button>
-  )
+    <>
+      <Button variant='none' type='button' onClick={addPlant}><FontAwesomeIcon className='heart' icon={faHeart} size='2x' /></Button>
+    </>
+  );
 }
 
 AddPlant.propTypes = {

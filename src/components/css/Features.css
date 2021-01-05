@@ -50,15 +50,16 @@ h4 {
 
 .carousel-section {
   text-align: center;
-  background-color: #f5efef;
-  height: 45rem;
+  background-color: #393e46;
+  height: 50em;
 }
 
 .carousel-img {
-  height: 500px;
+  height: 35em;
 }
 
 .carousel-title {
   position: relative;
   padding-top: 5%;
+  color: #f5efef;
 }
