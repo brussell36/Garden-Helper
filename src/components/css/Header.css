@@ -33,3 +33,15 @@
   position: relative;
   top: 100px;
 }
+
+.active {
+  color: red !important;
+}
+
+.heart {
+  color: darkgray;
+}
+
+.heart:hover {
+  color: red;
+}

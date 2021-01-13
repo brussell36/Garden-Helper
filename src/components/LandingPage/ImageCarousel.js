@@ -20,7 +20,7 @@ function ImageCarousel() {
           <Image className='carousel-img' src='https://img.sunset02.com/sites/default/files/styles/marquee_large_2x/public/image/2016/10/main/rosmarinus-officinalis-tuscan-blue.jpg' />
         </Carousel.Item>
         <Carousel.Item>
-          <Image className='carousel-img' src='https://cdn.britannica.com/31/137431-050-6470C3A9/spirea-flower-Japanese-plant-shrub-much-Canada.jpg' />
+          <Image className='carousel-img' src='https://www.gardeningknowhow.com/wp-content/uploads/2020/09/japanese-spirea.jpg' />
         </Carousel.Item>
         <Carousel.Item>
           <Image className='carousel-img' src='https://www.gardeningknowhow.com/wp-content/uploads/2013/07/sedum.jpg' />

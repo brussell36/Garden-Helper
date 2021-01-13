@@ -16,11 +16,20 @@ const reducer = (state, action) => {
   }
 }
 
-
-
 function NewPlantForm(props) {
   const [state, dispatch] = useReducer(reducer, {plants: []});
   const [display, setDisplay] = useState(null);
+  const [user, setUser] = useState(null);
+  let userPlants = [];
+  // const [userPlants, setUserPlants] = useState([]);
+
+  useEffect(() => props.firebase.auth.onAuthStateChanged(function(user){
+    if (user) {
+      setUser(user);
+    } else {
+      setUser(null);
+    }
+  }), [props.firebase.auth]);
 
   useEffect(() => {
     props.firebase.db.collection('plants').get()
@@ -28,7 +37,17 @@ function NewPlantForm(props) {
         const plants = querySnapshot.docs.map(doc => doc.data());
         plants.map(plant => dispatch({type: 'add_plant', plant}));
       })
-  }, [props.firebase.db])
+  }, [props.firebase.db]);
+
+  useEffect(() => {
+    if (user) {
+      props.firebase.db.collection(user.email).get()
+      .then(querySnapshot => {
+        const plants = querySnapshot.docs.map(doc => doc.data());
+        plants.map(plant => userPlants.push(plant.idPlant));
+      });
+    }
+  }, [user, props.firebase.db, userPlants]);
 
   function onSubmitForm(event) {
     event.preventDefault();
@@ -36,23 +55,14 @@ function NewPlantForm(props) {
     const waterValue = event.target.water.value;
     const soilValue = event.target.soil.value;
 
-    // const filteredResult = state.plants.filter(
-    //   plant => {
-    //     console.log(plant.sun);
-    //     console.log("Sun filter value: ", sunValue);
-    //     return plant.sun === sunValue || plant.water === waterValue || plant.soil === soilValue;
-    //   }
-    // );
-
-    // console.log("Filtered result: ", filteredResult);
-
     if(sunValue && waterValue && soilValue) {
       const sunResult = state.plants.filter(plant => plant.sun === sunValue && plant.water === waterValue && plant.soil === soilValue);
-      console.log(sunResult);
       setDisplay(<CardColumns>
         {sunResult.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               comonName={plant.commonName}
               latinName={plant.latinName}
@@ -61,6 +71,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
           })}
@@ -71,6 +82,8 @@ function NewPlantForm(props) {
         {sunResult.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
@@ -79,6 +92,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
           })}
@@ -89,6 +103,8 @@ function NewPlantForm(props) {
         {waterResult.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
@@ -97,6 +113,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
           })}
@@ -107,6 +124,8 @@ function NewPlantForm(props) {
         {sunResult.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
@@ -115,6 +134,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
           })}
@@ -125,6 +145,8 @@ function NewPlantForm(props) {
         {waterResult.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
@@ -133,6 +155,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
           })}
@@ -143,6 +166,8 @@ function NewPlantForm(props) {
         {soilResult.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
@@ -151,6 +176,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
           })}
@@ -160,6 +186,8 @@ function NewPlantForm(props) {
         {state.plants.map((plant) => {
           return(
             <Plant
+              userPlants={userPlants}
+              // setUserPlants={setUserPlants}
               plant={plant}
               commonName={plant.commonName}
               latinName={plant.latinName}
@@ -168,6 +196,7 @@ function NewPlantForm(props) {
               water={plant.water}
               soil={plant.soil}
               description={plant.description}
+              likedByUser={userPlants.includes(plant.idPlant)}
               key={plant.idPlant} />
           )
         })}

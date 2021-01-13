@@ -45,14 +45,16 @@ function UserPlantList(props) {
         return (
           <Plant
             plant={plant}
-            comonName={plant.commonName}
+            commonName={plant.commonName}
             latinName={plant.latinName}
             imgUrl={plant.imgUrl}
             sun={plant.sun}
             water={plant.water}
             soil={plant.soil}
             description={plant.description}
+            likedByUser={true}
             key={plant.idPlant}
+            idPlant={plant.idPlant}
           />
         );
       })}

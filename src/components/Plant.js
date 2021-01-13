@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import AddPlant from './AddPlant';
 
 function Plant(props) {
-
-  const favoriteButton = <AddPlant plant={props.plant} />;
+  let { userPlants } = props;
+  let { likedByUser } = props;
+  let { setUserPlants } = props;
+  const favoriteButton = <AddPlant plant={ props.plant } userPlants={ userPlants } likedByUser={ likedByUser } setUserPlants={ setUserPlants } />;
 
   return(
     <>
@@ -33,7 +35,8 @@ Plant.propTypes = {
   water: PropTypes.string,
   soil: PropTypes.string,
   description: PropTypes.string,
-  plant: PropTypes.object
+  plant: PropTypes.object,
+  userPlants: PropTypes.array
 }
 
 export default Plant;
